@@ -7,4 +7,8 @@ This app is version 1.0 - is first version.
 - Open app and enter password
 - Password: 12345
 
+**Dowload**
+- Download link: http://github.com/Hero-Entertainment114/CameraHCC-WD-1.0/
+- Download file `.exe` and do follow "Installation and launch instructions"
 
+**Thanks for used!**
