@@ -1,14 +1,32 @@
 ### CameraHCC-WD-1.0
-An application that opens your computer camera to take pictures for computers that cannot open the camera. This application is for Windows computers.
-This app is version 1.0 - is first version. 
 
-**Installation and launch instructions**
-- Install file `.zip` and extract file
-- Open app and enter password
-- Password: 12345
+Repository này hiện bao gồm một trang web tĩnh **Web Link Scanner** để quét link do người dùng cung cấp và hiển thị:
+- Nội dung tóm tắt trang (title/description/snippet).
+- Điểm an toàn ước tính theo heuristic.
+- Các dấu hiệu rủi ro và khuyến nghị sử dụng an toàn.
 
-**Dowload**
-- Download link: http://github.com/Hero-Entertainment114/CameraHCC-WD-1.0/
-- Download file `.exe` and do follow "Installation and launch instructions"
+## Chạy ứng dụng
 
-**Thanks for used!**
+Vì đây là web tĩnh, bạn chỉ cần mở file `index.html` trực tiếp hoặc chạy server local:
+
+```bash
+python3 -m http.server 8000
+```
+
+Sau đó truy cập: `http://localhost:8000`
+
+## Tính năng chính
+
+- Nhập URL bất kỳ để quét nhanh.
+- Chuẩn hóa URL tự động (tự thêm `https://` nếu thiếu).
+- Đánh giá an toàn bằng các tiêu chí:
+  - Có dùng HTTPS hay không.
+  - Tên miền/path có từ khóa đáng ngờ.
+  - Dùng IP thay vì domain.
+  - URL quá dài, cấu trúc path bất thường, có ký tự `@`.
+- Hiển thị khuyến nghị khi truy cập link lạ.
+
+## Lưu ý
+
+- Điểm an toàn chỉ mang tính tham khảo, không thay thế công cụ bảo mật chuyên sâu.
+- Nên kiểm tra thêm bằng VirusTotal hoặc Google Safe Browsing trước khi đăng nhập/nhập dữ liệu nhạy cảm.

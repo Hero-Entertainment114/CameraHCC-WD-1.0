@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Link Scanner</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header>
+        <h1>🔎 Web Link Scanner</h1>
+        <p>
+          Quét link để xem nhanh nội dung, mức độ an toàn ước tính và các chỉ số liên quan.
+        </p>
+      </header>
+
+      <section class="card form-card">
+        <label for="urlInput">Nhập link cần quét</label>
+        <div class="input-row">
+          <input
+            id="urlInput"
+            type="url"
+            placeholder="Ví dụ: https://example.com"
+            autocomplete="off"
+          />
+          <button id="scanBtn">Quét ngay</button>
+        </div>
+        <small>
+          Lưu ý: điểm an toàn là đánh giá heuristic (không thay thế công cụ security chuyên sâu).
+        </small>
+      </section>
+
+      <section id="loading" class="card hidden">Đang quét link...</section>
+
+      <section id="results" class="grid hidden">
+        <article class="card">
+          <h2>Tổng quan</h2>
+          <div class="score-wrap">
+            <div id="scoreBadge" class="badge">--</div>
+            <p id="scoreText">Chưa có dữ liệu.</p>
+          </div>
+          <ul id="overviewList" class="list"></ul>
+        </article>
+
+        <article class="card">
+          <h2>Phân tích URL</h2>
+          <ul id="analysisList" class="list"></ul>
+        </article>
+
+        <article class="card">
+          <h2>Nội dung trang</h2>
+          <p><strong>Tiêu đề:</strong> <span id="pageTitle">--</span></p>
+          <p><strong>Mô tả:</strong> <span id="pageDescription">--</span></p>
+          <p><strong>Snippet:</strong></p>
+          <p id="pageSnippet" class="snippet">--</p>
+        </article>
+
+        <article class="card">
+          <h2>Khuyến nghị</h2>
+          <ul id="recommendationList" class="list"></ul>
+        </article>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
